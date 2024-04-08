@@ -1,0 +1,159 @@
+:root {
+  --couleur-text-principale:#130a66;
+  --taille-police-principale: 20px;
+  --taille-police-secondaire: 16px;
+}
+
+
+body {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: url(background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  width: 500px;
+  height: auto;
+  min-height: 400px;
+  background: transparent;
+  border: 2px solid #130a66;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  justify-content: center;
+}
+
+.task-checked {
+  text-decoration: line-through;
+  justify-content: center;
+}
+
+.task-text::after {
+  text-decoration: line-through;
+}
+
+#nouvelle-tache {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#ajouter-btn:hover {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: aqua;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#liste-taches {
+  list-style: none;
+  padding: 0;
+}
+
+#liste-taches li {
+  overflow: auto;
+  display: flex;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.supprimer-btn {
+  float: right;
+  background-color: #ff6347; /* Couleur de fond rouge */
+  color: white; /* Couleur du texte blanc */
+  border: none; /* Pas de bordure */
+  padding: 5px 10px; /* Espacement interne */
+  cursor: pointer; /* Curseur pointeur */
+  margin-left: 10px; /* Marge à gauche pour l'espacement */
+}
+
+#calendrier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #130a66;
+  transition: all 0.2s ease;
+}
+
+.ajout-tache {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #130a66;
+  transition: all 0.2s ease;
+}
+
+#priorite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #130a66;
+  transition: all 0.2s ease;
+}
+
+#nouvelle-tache {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #130a66;
+  transition: all 0.2s ease;
+}
+
+#ajouter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #130a66;
+  transition: all 0.2s ease;
+}
+
+h1 {
+  color: #130a66;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+#liste-taches {
+  max-height: 200px; /* Hauteur maximale de la liste */
+  overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+}
+
+#liste-taches img {
+  max-height: 75px; /* Hauteur maximale de l'image */
+  width: auto; /* Pour maintenir la proportion de l'image */
+  margin-bottom: 20px; /* Marge inférieure pour l'espacement */
+}
+.image {
+  margin: 55px auto 0;
+  display: flex;
+  margin-left: 30%;
+}
