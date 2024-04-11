@@ -48,7 +48,7 @@ function ajouterTacheToListe(taskObj) {
   li.innerHTML = `
     <label>
       <input type="checkbox">
-      <span class="task-text">${taskObj.task}</span>
+      <span class="task-te%xt">${taskObj.task}</span>
       <span class="task-text">${taskObj.calendrier}</span>
       <span class="task-text">${taskObj.priorite}</span>
     </label>
