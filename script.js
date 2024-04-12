@@ -4,9 +4,10 @@ let listeTaches = document.getElementById("liste-taches");
 let calendrier = document.getElementById("calendrier");
 let priorite = document.getElementById("priorite");
 let image = document.querySelector(".image"); // Sélection de l'élément de l'image
-
+let taches = [];
 // Fonction pour ajouter une tâche
 function ajouter() {
+  
   // Récupération des valeurs des champs de saisie
   let task = nouvelleTacheInput.value.trim();
   let calendrierContent = calendrier.value.trim();
@@ -26,8 +27,11 @@ function ajouter() {
     priorite: prioriteContent,
   };
 
+  taches.push(taskObj);
+  console.log(taches);
   // Ajout de la tâche à la liste
   ajouterTacheToListe(taskObj);
+  localStorage.setItem("tasks", JSON.stringify(taches));
 
   // Réinitialisation des champs de saisie
   nouvelleTacheInput.value = "";
@@ -91,10 +95,11 @@ if (nouvelleTacheInput) {
 
 // Charger les tâches existantes depuis le stockage local lorsque la page est chargée
 document.addEventListener("DOMContentLoaded", function () {
-  let savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  taches = JSON.parse(localStorage.getItem("tasks")) || [];
+  console.log(taches);
 
   // Ajouter chaque tâche sauvegardée à la liste des tâches
-  savedTasks.forEach(function (taskObj) {
+  taches.forEach(function (taskObj) {
     ajouterTacheToListe(taskObj);
   });
 
@@ -127,5 +132,4 @@ function sauvegarderTaches() {
   localStorage.setItem("tasks", JSON.stringify(taches));
 }
 
-// Ajouter un gestionnaire d'événements pour la sauvegarde des tâches lors de la fermeture de la page ou du rechargement
-window.addEventListener("beforeunload", sauvegarderTaches);
+
