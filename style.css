@@ -68,12 +68,12 @@ body {
 
 .supprimer-btn {
   float: right;
-  background-color: #ff6347; /* Couleur de fond rouge */
-  color: white; /* Couleur du texte blanc */
-  border: none; /* Pas de bordure */
-  padding: 5px 10px; /* Espacement interne */
-  cursor: pointer; /* Curseur pointeur */
-  margin-left: 10px; /* Marge à gauche pour l'espacement */
+  background-color: #ff6347;
+  color: white; 
+  border: none;
+  padding: 5px 10px; 
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 #calendrier {
@@ -143,14 +143,14 @@ h1 {
 }
 
 #liste-taches {
-  max-height: 200px; /* Hauteur maximale de la liste */
-  overflow-y: auto; /* Activer le défilement vertical si nécessaire */
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 #liste-taches img {
-  max-height: 75px; /* Hauteur maximale de l'image */
-  width: auto; /* Pour maintenir la proportion de l'image */
-  margin-bottom: 20px; /* Marge inférieure pour l'espacement */
+  max-height: 75px;
+  width: auto; 
+  margin-bottom: 20px; 
 }
 .image {
   margin: 55px auto 0;
